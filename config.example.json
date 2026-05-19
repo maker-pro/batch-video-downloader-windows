@@ -1,0 +1,10 @@
+{
+  "output_dir": "downloads",
+  "m3u8dl_path": "tools/N_m3u8DL-CLI/N_m3u8DL-CLI.exe",
+  "proxy": "",
+  "concurrency": 2,
+  "use_system_proxy": true,
+  "enable_playwright": true,
+  "request_timeout": 20,
+  "max_direct_retries": 3
+}

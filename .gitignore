@@ -1,0 +1,63 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Local app state
+config.json
+config.local.json
+*.local.json
+.env
+.env.*
+downloads/
+logs/
+*.log
+*.part
+*.tmp
+
+# Bundled external binaries and large downloaded tools
+tools/
+
+# Playwright/browser caches that may be created inside the project
+ms-playwright/
+.cache/
+
+# Build and packaging output
+build/
+dist/
+*.egg-info/
+*.spec
+
+# IDE/editor files
+.idea/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS files
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Local archives and media outputs
+*.zip
+*.7z
+*.rar
+*.mp4
+*.mkv
+*.ts
+*.m4a
+*.webm
