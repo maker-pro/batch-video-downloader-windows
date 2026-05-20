@@ -36,6 +36,7 @@ ms-playwright/
 # Build and packaging output
 build/
 dist/
+release/
 *.egg-info/
 *.spec
 

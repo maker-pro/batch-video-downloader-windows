@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import html
+import os
 import random
 import re
 import time
@@ -16,6 +17,7 @@ except Exception:  # pragma: no cover - optional dependency
     BeautifulSoup = None
 
 from .models import AppSettings, PageVideo, VideoCandidate
+from .config import APP_ROOT
 from .utils import (
     extension_from_url,
     is_m3u8_url,
@@ -366,6 +368,9 @@ def best_m3u8_variant(candidate: VideoCandidate, page_url: str, settings: AppSet
 
 
 def fetch_rendered_page(page_url: str, settings: AppSettings) -> RenderedPage:
+    bundled_browsers = APP_ROOT / "ms-playwright"
+    if bundled_browsers.exists():
+        os.environ.setdefault("PLAYWRIGHT_BROWSERS_PATH", str(bundled_browsers))
     try:
         from playwright.sync_api import sync_playwright
     except Exception:

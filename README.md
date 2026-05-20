@@ -78,6 +78,20 @@ socks5://127.0.0.1:7890
 
 更完整的迁移说明见 [PORTABLE_WINDOWS.md](PORTABLE_WINDOWS.md)。
 
+## 打包 exe
+
+```powershell
+scripts\build_exe.bat
+```
+
+打包结果：
+
+```text
+dist\BatchVideoDownloader\BatchVideoDownloader.exe
+```
+
+如果要发给其他人使用，请把整个 `dist\BatchVideoDownloader` 文件夹一起打包，而不是只复制单个 exe。该文件夹里包含 Python 运行文件、Playwright Chromium 和 `N_m3u8DL-CLI`。
+
 ## 注意
 
 - 页面本身是 `mp4/m3u8` 直链时会跳过页面解析，直接下载
